@@ -60,7 +60,7 @@ public class UserDaoImpl implements UserDao {
 
 
     /**
-     * 过滤，目前只做了用户id，userName的过滤
+     * 过滤方面 目前只做了用户id,userName的过滤
      *
      * @param list  当前User集合
      * @param where 过滤条件
@@ -123,7 +123,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     /**
-     * 排序，目前只做了用户id，userNamed的排序
+     * 排序方面目前只做了用户id, userNamed,userPassword的排序
      *
      * @param list    当前User集合
      * @param orderBy 排序条件
