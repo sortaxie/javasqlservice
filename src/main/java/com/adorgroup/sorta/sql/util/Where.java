@@ -1,6 +1,5 @@
 package com.adorgroup.sorta.sql.util;
 
-
 import java.util.List;
 
 /**
