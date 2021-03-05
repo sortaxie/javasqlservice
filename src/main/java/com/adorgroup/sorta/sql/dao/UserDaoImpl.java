@@ -74,7 +74,7 @@ public class UserDaoImpl implements UserDao {
                 // 与逻辑
                 if (where.getMinId() != null && where.getMaxId() != null) {
                     if (where.getMinId() > list.get(list.size() - 1).getId() || where.getMaxId() < list.get(0).getId()) {
-                        throw new ArgsException("参数输入有误,请重新输入");
+                        throw new ArgsException("Arguments error");
                     }
                     list = list.stream().filter(userEntity -> userEntity.getId() <= where.getMaxId()
                             && userEntity.getId() >= where.getMinId()).collect(Collectors.toList());
@@ -94,7 +94,7 @@ public class UserDaoImpl implements UserDao {
                 List<UserEntity> list1 = null;
                 if (where.getMinId() != null && where.getMaxId() != null) {
                     if (where.getMinId() > list.get(list.size() - 1).getId() || where.getMaxId() < list.get(0).getId()) {
-                        throw new ArgsException("参数输入有误,请重新输入");
+                        throw new ArgsException("Arguments error");
                     }
                     list1 = list.stream().filter(userEntity -> userEntity.getId() <= where.getMaxId()
                             && userEntity.getId() >= where.getMinId()).collect(Collectors.toList());
@@ -261,7 +261,7 @@ public class UserDaoImpl implements UserDao {
 
         if (limit != null && limit.getCnt() != null) {
             if (limit.getCnt() < 0) {
-                throw new ArgsException("参数输入有误,请重新输入!");
+                throw new ArgsException("Arguments error");
             }
             if (limit.getCnt() != null) {
                 list = list.stream().limit(limit.getCnt()).collect(Collectors.toList());
